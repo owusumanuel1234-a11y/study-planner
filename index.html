@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Study Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="app-header">
+      <h1>Student Study Planner</h1>
+      <p>Organise your study tasks in one place.</p>
+    </header>
+
+    <section class="card">
+      <h2>Add a task</h2>
+      <form id="task-form" novalidate>
+        <label for="task-title">Task title *</label>
+        <input type="text" id="task-title" placeholder="e.g. Review lecture notes">
+        <p id="error-message" class="error" hidden>Please enter a task title</p>
+
+        <div class="row">
+          <div>
+            <label for="task-course">Subject / Course name</label>
+            <input type="text" id="task-course" placeholder="e.g. Mathematics">
+          </div>
+          <div>
+            <label for="task-due">Due date (optional)</label>
+            <input type="date" id="task-due">
+          </div>
+        </div>
+
+        <button type="submit">Add Task</button>
+      </form>
+    </section>
+
+    <section>
+      <div class="list-header">
+        <h2>My Tasks</h2>
+        <span id="task-counter">0 of 0 complete</span>
+      </div>
+      <ul id="task-list"></ul>
+      <p id="empty-message" class="empty">No tasks yet. Add your first study task above.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
