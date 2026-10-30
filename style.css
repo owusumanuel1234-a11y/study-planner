@@ -1,6 +1,3 @@
-* { box-sizing: border-box; }
-[hidden] { display: none !important; }
-
 body {
   margin: 0;
   font-family: "Inter", Arial, sans-serif;
@@ -95,27 +92,20 @@ form button:hover { background: #4a2fd6; transform: translateY(-1px); }
 .tag { background: #ece9ff; color: #4a2fd6; padding: 3px 10px; border-radius: 999px; }
 .badge { background: #ffe3e3; color: #c92a2a; padding: 3px 10px; border-radius: 999px; font-weight: 600; }
 
-.task-actions { display: flex; gap: 8px; }
-.task-actions button {
-  padding: 7px 12px;
-  border: none;
-  border-radius: 8px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  cursor: pointer;
-}
-.btn-toggle { background: #ece9ff; color: #4a2fd6; }
-.btn-delete { background: #ffe3e3; color: #c92a2a; }
+.card { border: 1px solid #ebe9ff; }
 
-.task.completed { background: #f1fbf5; border-color: #b7ebc9; }
-.task.completed .task-title { text-decoration: line-through; color: #8a8aa0; }
-.task.overdue { border-color: #f5b5b5; background: #fff8f8; }
+form button { transition: transform 0.15s, background 0.15s; }
+form button:hover { transform: translateY(-1px); }
 
-.empty {
+.task { transition: box-shadow 0.2s, transform 0.2s; }
+.task:hover { box-shadow: 0 6px 18px rgba(60, 40, 180, 0.1); transform: translateY(-1px); }
+
+.site-footer {
+  max-width: 640px;
+  margin: 24px auto 0;
+  padding: 24px 16px 32px;
   text-align: center;
-  padding: 40px 16px;
-  border: 2px dashed #d9dbe8;
-  border-radius: 14px;
+  font-size: 0.8rem;
   color: #6b6b80;
 }
 
