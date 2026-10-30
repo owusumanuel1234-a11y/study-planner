@@ -4,17 +4,31 @@
 body {
   margin: 0;
   font-family: "Inter", Arial, sans-serif;
-  background: #f4f5fb;
+  background: linear-gradient(180deg, #e9e6ff 0%, #f4f5fb 320px);
+  background-attachment: fixed;
   color: #1a1a2e;
+  min-height: 100vh;
 }
 
 .container { max-width: 640px; margin: 0 auto; padding: 24px 16px; }
 
-.app-header h1 { margin: 0; font-size: 1.6rem; }
-.app-header p { margin: 4px 0 24px; color: #6b6b80; }
+.app-header { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
+.app-header h1 { margin: 0; font-size: 1.7rem; }
+.app-header p { margin: 4px 0 0; color: #6b6b80; }
+.logo {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  background: #5b3df5;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(91, 61, 245, 0.35);
+}
 
 .card {
   background: #fff;
+  border: 1px solid #ebe9ff;
   border-radius: 16px;
   padding: 20px;
   box-shadow: 0 4px 16px rgba(60, 40, 180, 0.08);
@@ -48,8 +62,9 @@ form button {
   border-radius: 10px;
   font-weight: 600;
   cursor: pointer;
+  transition: transform 0.15s, background 0.15s;
 }
-form button:hover { background: #4a2fd6; }
+form button:hover { background: #4a2fd6; transform: translateY(-1px); }
 
 .list-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
 #task-counter {
@@ -71,7 +86,9 @@ form button:hover { background: #4a2fd6; }
   border: 1px solid #e3e5f0;
   border-radius: 14px;
   padding: 14px 16px;
+  transition: box-shadow 0.2s, transform 0.2s;
 }
+.task:hover { box-shadow: 0 6px 18px rgba(60, 40, 180, 0.1); transform: translateY(-1px); }
 .task-main { display: flex; align-items: flex-start; gap: 12px; }
 .task-title { margin: 0 0 6px; font-weight: 600; }
 .task-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 0.75rem; color: #6b6b80; }
@@ -101,3 +118,14 @@ form button:hover { background: #4a2fd6; }
   border-radius: 14px;
   color: #6b6b80;
 }
+
+.site-footer {
+  max-width: 640px;
+  margin: 24px auto 0;
+  padding: 24px 16px 32px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b6b80;
+  border-top: 1px solid #dcdcec;
+}
+.site-footer p { margin: 4px 0; }
